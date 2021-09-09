@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/all.min.css">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+    <!-----------------CRUD SYSTEM--------------------------------->
+    <div class="container w-75 mx-auto mt-5 p-5 shadow-lg">
+        <h1 class="text-center">CRUD SYSTEM</h1>
+
+      <div class="form-group">
+        <label for="proName">Product Name:</label>
+        <input class="form-control" id="proName" type="text">
+      </div>
+
+      <div class="form-group">
+        <label for="proCategory">Product Category:</label>
+        <input class="form-control" id="proCategory" type="text">
+      </div> 
+
+      <div class="form-group">
+        <label for="proPrice">Product Price:</label>
+        <input class="form-control" id="proPrice" type="number">
+      </div>
+
+      <div class="form-group">
+        <label for="proDescription">Product Description:</label>
+        <textarea class="form-control" id="proDescription" type="text"></textarea>
+      </div>
+      <div class="alert myAlert my-3 d-none" role="alert" id="isFoundAlert">
+        <span>Please Enter All Fields...</span>
+      </div>
+      <button class="btn btn-secondary d-none"onclick="updateProduct();" id="update">Update Product</button>
+      <button class="btn btn-info" onclick="addProduct();" id="addbtn">Add Product</button>
+    </div>
+     
+    <!---------------search input-------------------------------->
+     
+    <div class="container w-75 m-auto ">
+        <input onkeyup="searchProduct(this.value)" class="form-control mx-auto mt-5 w-50" type="text" placeholder="searsh..." id="searshInp">
+    </div>
+    <!---------------table product----------------------------->
+    <div class="container mx-auto mt-5">
+        <table class="table table-striped text-center">
+            <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+              
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+        <script src="JS/jquery-3.5.1.slim.min.js"></script>
+        <script src="JS/popper.min.js"></script>
+        <script src="JS/bootstrap.min.js"></script>
+        <script src="JS/crud.js"></script>
+    </body>
+</html>
